@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tran.qa16.tests.TestLogin" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-06T17:09:16" hostname="Lena-Toshiba" time="3.085">
+<testsuite name="com.tran.qa16.tests.TestLogin" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-13T16:53:43" hostname="Lena-Toshiba" time="3.165">
   <properties/>
-  <testcase name="loginTest" classname="com.tran.qa16.tests.TestLogin" time="0.496"/>
-  <testcase name="negativeLoginTest" classname="com.tran.qa16.tests.TestLogin" time="2.447"/>
+  <testcase name="loginTest" classname="com.tran.qa16.tests.TestLogin" time="0.516"/>
+  <testcase name="negativeLoginTest" classname="com.tran.qa16.tests.TestLogin" time="2.503"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

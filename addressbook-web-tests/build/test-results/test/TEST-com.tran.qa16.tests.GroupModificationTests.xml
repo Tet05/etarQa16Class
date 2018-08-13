@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tran.qa16.tests.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-06T17:09:14" hostname="Lena-Toshiba" time="1.297">
+<testsuite name="com.tran.qa16.tests.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-13T16:53:40" hostname="Lena-Toshiba" time="1.248">
   <properties/>
-  <testcase name="testGroupModification" classname="com.tran.qa16.tests.GroupModificationTests" time="1.297"/>
+  <testcase name="testGroupModification" classname="com.tran.qa16.tests.GroupModificationTests" time="1.248"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

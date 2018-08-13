@@ -4,7 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,9 +14,21 @@ public class ApplicationManager {
     SessionHelper sessionHelper;
     GroupHelper groupHelper;
     private WebDriver wd;
+    private String browser;
+
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
 
     public void start() {
-        wd = new ChromeDriver();
+        if(browser.equals(BrowserType.CHROME)){
+            wd = new ChromeDriver();
+        }else if(browser.equals(BrowserType.FIREFOX)){
+            wd = new FirefoxDriver();
+        }else if(browser.equals(BrowserType.EDGE)) {
+            wd = new EdgeDriver();
+        }
+
         wd.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         sessionHelper= new SessionHelper(wd);
         sessionHelper.openSite("http://localhost/addressbook");
@@ -22,9 +36,9 @@ public class ApplicationManager {
         groupHelper = new GroupHelper(wd);
     }
 
-    public void click(By locator) {
-        wd.findElement(locator).click();
-    }
+//    public void click(By locator) {
+//        wd.findElement(locator).click();
+//    }
 
     public void stop() {
         wd.quit();
