@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class GroupDeletionTest extends TestBase {
     @Test
-    public void deletionLastGroupTest(){
+    public void deletionLastGroupTest() throws InterruptedException {
         app.getGroupHelper().goToGroupsPage();
 
         if(!app.getGroupHelper().isGroupPresent()){
@@ -16,8 +16,8 @@ public class GroupDeletionTest extends TestBase {
         app.getGroupHelper().groupDeletion();
         app.getGroupHelper().returnToGroupsPage();
         int after = app.getGroupHelper().getGroupsCount();
-
-        Assert.assertEquals(after, before);
+Thread.sleep(2000);
+        Assert.assertEquals(after, before-1);
     }
 
     @Test
